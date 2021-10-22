@@ -16,11 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] Items2_3;
     public GameObject[] Items2_4;
     public GameObject canvas;
+    public GameObject[] buttons;
 
     [Range(1f, 10f)]
     public float fadeInTime = 2.0f;
     [Range(1f, 10f)]
-    public float stayTime = 3.0f;
+    public float stayTime = 6.0f;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         drawingItems2_5 = GameObject.FindGameObjectsWithTag("drawingItems2_5");
         Items2_3 = GameObject.FindGameObjectsWithTag("2_3items");
         Items2_4 = GameObject.FindGameObjectsWithTag("2_4items");
+        buttons = GameObject.FindGameObjectsWithTag("button");
         StartCoroutine("ChangeScene");
     }
     void Update()
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(stayTime);
+        yield return new WaitForSeconds(stayTime-2f);
         FlashBack(scene2_1);
         yield return new WaitForSeconds(stayTime);
         FlashBack(scene2_2);
@@ -46,8 +48,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ChangeScene2()
     {
         setClothesColor();
-        GroupFlashBack(drawingItems2_3, Items2_3);
-        canvas.SetActive(false);
+        ButtonGroupFlashBack(drawingItems2_3, Items2_3);
         yield return new WaitForSeconds(stayTime);
         GroupFlashBack(drawingItems2_4, Items2_4);
     }
@@ -130,5 +131,53 @@ public class GameManager : MonoBehaviour
         {
             item.SetActive(false);
         }
+    }
+    void ButtonGroupFlashBack(GameObject[] sprites, GameObject[] items)
+    {
+        StartCoroutine(ButtonGroupFadeOut(sprites, items));
+    }
+    IEnumerator ButtonGroupFadeOut(GameObject[] sprites, GameObject[] items)
+    {
+        float timer = .0f;
+        //yield return new WaitForSeconds(stayTime);
+
+        timer = .0f;
+        while (timer < fadeInTime)
+        {
+            timer += Time.deltaTime;
+            foreach (var sprite in sprites)
+            {
+                SpriteRenderer renderer = sprite.GetComponent<SpriteRenderer>();
+                Color newColor = renderer.color;
+                newColor.a = 1.0f - (timer / fadeInTime);
+                renderer.color = newColor;
+            }
+            foreach (var item in items)
+            {
+                SpriteRenderer renderer = item.GetComponent<SpriteRenderer>();
+                Color newColor = renderer.color;
+                newColor.a = 1.0f - (timer / fadeInTime);
+                renderer.color = newColor;
+            }
+            foreach (var button in buttons)
+            {
+                UnityEngine.UI.Image img = button.GetComponent<UnityEngine.UI.Image>();
+                Color newColor = img.color;
+                newColor.a = 1.0f - (timer / fadeInTime);
+                img.color = newColor;
+            }
+
+
+            yield return null;
+        }
+        foreach (var sprite in sprites)
+        {
+            sprite.SetActive(false);
+        }
+        foreach (var item in items)
+        {
+            item.SetActive(false);
+        }
+        canvas.SetActive(false);
     }
 }
