@@ -2114,7 +2114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &458103040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4771,7 +4771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1044739848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5589,7 +5589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1254924520
 Transform:
   m_ObjectHideFlags: 0
@@ -5793,6 +5793,7 @@ MonoBehaviour:
   drawingItems2_5: []
   Items2_3: []
   Items2_4: []
+  canvas: {fileID: 368190873}
   fadeInTime: 2
   stayTime: 3
 --- !u!4 &1382200999
@@ -6772,7 +6773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1736021322
 Transform:
   m_ObjectHideFlags: 0
