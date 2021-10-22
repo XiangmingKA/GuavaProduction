@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class FootStep : MonoBehaviour
@@ -59,6 +59,7 @@ public class FootStep : MonoBehaviour
         {
             SpriteAppear(tenYearsOld);
             FlashBack(tenYearsOldMemory);
+            StartCoroutine(LoadNextScene());
         }
         else
         {
@@ -129,5 +130,29 @@ public class FootStep : MonoBehaviour
         }
 
         sprite.SetActive(false);
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(fadeInTime * 2 + stayTime);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public GameObject button;
+    IEnumerator ButtonFadeOut()
+    {
+        UnityEngine.UI.Image img = button.GetComponent<UnityEngine.UI.Image>();
+        float timer = .0f;
+        while (timer < fadeInTime)
+        {
+            timer += Time.deltaTime;
+
+            Color newColor = img.color;
+            newColor.a = 1.0f - (timer / fadeInTime);
+            img.color = newColor;
+
+            yield return null;
+        }
     }
 }
