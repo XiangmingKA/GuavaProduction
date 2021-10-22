@@ -16,6 +16,11 @@ public class FootStep : MonoBehaviour
     [Range(1, 10)]
     public int footstepsToNext = 4;
 
+    [Range(1f, 10f)]
+    public float fadeInTime = 2.0f;
+    [Range(1f, 10f)]
+    public float stayTime = 3.0f;
+
     int currentInteractionIndex = 0;
     int currentFootstepIndex = 0;
     // Start is called before the first frame update
@@ -62,7 +67,6 @@ public class FootStep : MonoBehaviour
         
     }
 
-    float fadeInTime = 1.0f;
     void SpriteAppear(GameObject obj)
     {
         obj.SetActive(true);
@@ -110,7 +114,7 @@ public class FootStep : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(fadeInTime);
+        yield return new WaitForSeconds(stayTime);
 
         timer = .0f;
         while (timer < fadeInTime)
