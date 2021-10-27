@@ -170,6 +170,7 @@ MonoBehaviour:
   footstepsToNext: 4
   fadeInTime: 1.5
   stayTime: 3
+  button: {fileID: 0}
 --- !u!4 &17145368
 Transform:
   m_ObjectHideFlags: 0
