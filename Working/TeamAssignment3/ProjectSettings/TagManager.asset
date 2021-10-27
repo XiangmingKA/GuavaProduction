@@ -13,6 +13,7 @@ TagManager:
   - 2_3items
   - 2_4items
   - 2_5items
+  - button
   layers:
   - Default
   - TransparentFX
@@ -73,6 +74,9 @@ TagManager:
     locked: 0
   - name: 'Scene3- drawings '
     uniqueID: 188901619
+    locked: 0
+  - name: Scene3 - canvas
+    uniqueID: 3072245695
     locked: 0
   - name: Scene3 - cursor
     uniqueID: 3647769107

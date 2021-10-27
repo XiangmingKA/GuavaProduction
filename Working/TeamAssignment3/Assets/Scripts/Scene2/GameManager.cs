@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
     public GameObject[] buttons;
 
+    public static bool NextButtonStatus;
+
     [Range(1f, 10f)]
     public float fadeInTime = 2.0f;
     [Range(1f, 10f)]
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        NextButtonStatus = false;
         drawingItems2_3 = GameObject.FindGameObjectsWithTag("drawingItems2_3");
         drawingItems2_4 = GameObject.FindGameObjectsWithTag("drawingItems2_4");
         drawingItems2_5 = GameObject.FindGameObjectsWithTag("drawingItems2_5");

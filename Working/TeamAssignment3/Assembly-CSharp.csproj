@@ -60,7 +60,6 @@
     <Compile Include="Assets\Scripts\Scene2\changeClothesColor.cs" />
     <Compile Include="Assets\Scripts\ItemMovement.cs" />
     <Compile Include="Assets\Scripts\Scene2\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Scene2\ChangeSceneButton.cs" />
     <Compile Include="Assets\Scripts\Scene2\colorButton.cs" />
     <Compile Include="Assets\Scripts\Scene2\changeCursorColor.cs" />
   </ItemGroup>
