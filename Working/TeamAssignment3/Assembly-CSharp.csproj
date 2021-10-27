@@ -58,12 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Scene1\FootStep.cs" />
     <Compile Include="Assets\Scripts\Scene2\changeClothesColor.cs" />
+    <Compile Include="Assets\Scripts\Scene3\CharacterAppear.cs" />
     <Compile Include="Assets\Scripts\ItemMovement.cs" />
     <Compile Include="Assets\Scripts\Scene2\GameManager.cs" />
     <Compile Include="Assets\Scripts\Scene2\colorButton.cs" />
     <Compile Include="Assets\Scripts\Scene2\changeCursorColor.cs" />
     <Compile Include="Assets\Scripts\Scene3\Scene3Camermove.cs" />
-    <Compile Include="Assets\Scripts\Scene3\CharacterAppear.cs" />
     <Compile Include="Assets\Scripts\Scene3\Sandwich.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -314,6 +314,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.14f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.14f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.14f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
