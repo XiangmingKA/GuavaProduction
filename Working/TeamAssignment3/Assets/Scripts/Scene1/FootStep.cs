@@ -43,10 +43,11 @@ public class FootStep : MonoBehaviour
         FlashBack(threeYearsOldMemory);
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnButtonDown()
@@ -64,6 +65,7 @@ public class FootStep : MonoBehaviour
                 SpriteAppear(tenYearsOld);
                 FlashBack(tenYearsOldMemory);
                 StartCoroutine(LoadNextScene());
+                FootstepSoundManager.instance.PlayTenYears();
             }
             else
             {
