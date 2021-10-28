@@ -234,7 +234,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   classroomAmbiant: {fileID: 8300000, guid: 046bd71bf4a96d144964faed09aee62c, type: 3}
-  draw: {fileID: 8300000, guid: 64d0f931653af1044a6ec94a49e59d3c, type: 3}
+  drawSounds:
+  - {fileID: 8300000, guid: 22a532cb736dbbc4799dfce2777fd2ab, type: 3}
+  - {fileID: 8300000, guid: db36b7bccf40c684b9d7a3eff8f65e79, type: 3}
+  - {fileID: 8300000, guid: cba4b66016f0d364d8ecfaff19855d6d, type: 3}
+  - {fileID: 8300000, guid: fec0513a44711754b82d35ed12cc83f7, type: 3}
+  - {fileID: 8300000, guid: c4faa58fccb740b449481fb7bbf231f1, type: 3}
   laugh: {fileID: 8300000, guid: f4fb36547e0b6bb42be91ad14f20094f, type: 3}
 --- !u!82 &7986128
 AudioSource:
