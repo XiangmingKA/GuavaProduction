@@ -5,6 +5,8 @@ using UnityEngine;
 public class changeClothesColor : MonoBehaviour
 {
     public GameObject NextButton;
+    public GameObject laughtingMark;
+
     bool IsTriggered;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,9 @@ public class changeClothesColor : MonoBehaviour
         if(IsTriggered && Input.GetMouseButtonDown(0))
         {
             this.GetComponent<SpriteRenderer>().color = changeCursorColor.paintColor;
+            if(laughtingMark!= null)
+                laughtingMark.GetComponent<SpriteRenderer>().color = this.GetComponent<SpriteRenderer>().color;
+
             Scene2Sound.instance.PlayDrawSound();
             if (!GameManager.NextButtonStatus)
             {
