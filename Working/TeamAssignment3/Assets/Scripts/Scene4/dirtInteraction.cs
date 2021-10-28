@@ -5,6 +5,7 @@ using UnityEngine;
 public class dirtInteraction : MonoBehaviour
 {
     public GameObject nextDirt;
+    public GameObject DirtInMirror;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class dirtInteraction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("cloth")){
             this.gameObject.SetActive(false);
-            if(nextDirt!=null)
+            DirtInMirror.SetActive(false);
+            if (nextDirt!=null)
                 nextDirt.SetActive(true);
         }
     }

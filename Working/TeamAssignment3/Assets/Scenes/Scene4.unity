@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 1898906115}
+  DirtInMirror: {fileID: 0}
 --- !u!61 &362981239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -622,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 865843211}
+  DirtInMirror: {fileID: 1898906115}
 --- !u!61 &595439148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -767,6 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 0}
+  DirtInMirror: {fileID: 1742617895}
 --- !u!61 &865843215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1184,6 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 595439144}
+  DirtInMirror: {fileID: 362981235}
 --- !u!50 &1336711587
 Rigidbody2D:
   serializedVersion: 4
@@ -1588,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 0}
+  DirtInMirror: {fileID: 0}
 --- !u!212 &1742617900
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2079,6 +2084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDirt: {fileID: 1742617895}
+  DirtInMirror: {fileID: 0}
 --- !u!212 &1898906120
 SpriteRenderer:
   m_ObjectHideFlags: 0
