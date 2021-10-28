@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         ButtonGroupFlashBack(drawingItems2_3, Items2_3);
         yield return new WaitForSeconds(stayTime);
         GroupFlashBack(drawingItems2_4, Items2_4);
+        Scene2Sound.instance.PlayLaughSound();
     }
     public void ButtonClick()
     {

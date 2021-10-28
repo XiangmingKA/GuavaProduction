@@ -18,6 +18,7 @@ public class changeClothesColor : MonoBehaviour
         if(IsTriggered && Input.GetMouseButtonDown(0))
         {
             this.GetComponent<SpriteRenderer>().color = changeCursorColor.paintColor;
+            Scene2Sound.instance.PlayDrawSound();
             if (!GameManager.NextButtonStatus)
             {
                 GameManager.NextButtonStatus = true;
