@@ -23,6 +23,8 @@ public class FootStep : MonoBehaviour
 
     int currentInteractionIndex = 0;
     int currentFootstepIndex = 0;
+
+    bool bottonActive = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,21 +51,24 @@ public class FootStep : MonoBehaviour
 
     public void OnButtonDown()
     {
-        currentInteractionIndex++;
-        if (currentInteractionIndex == 5)
+        if(bottonActive)
         {
-            SpriteAppear(sixYearsOld);
-            FlashBack(sixYearsOldMemory);
-        }
-        else if (currentInteractionIndex == 10)
-        {
-            SpriteAppear(tenYearsOld);
-            FlashBack(tenYearsOldMemory);
-            StartCoroutine(LoadNextScene());
-        }
-        else
-        {
-            SpriteAppear(footSteps[currentFootstepIndex++]);
+            currentInteractionIndex++;
+            if (currentInteractionIndex == 5)
+            {
+                SpriteAppear(sixYearsOld);
+                FlashBack(sixYearsOldMemory);
+            }
+            else if (currentInteractionIndex == 10)
+            {
+                SpriteAppear(tenYearsOld);
+                FlashBack(tenYearsOldMemory);
+                StartCoroutine(LoadNextScene());
+            }
+            else
+            {
+                SpriteAppear(footSteps[currentFootstepIndex++]);
+            }
         }
         
     }
@@ -97,6 +102,7 @@ public class FootStep : MonoBehaviour
 
     IEnumerator FadeInAndOut(GameObject sprite)
     {
+        bottonActive = false;
         SpriteRenderer renderer = sprite.GetComponent<SpriteRenderer>();
         float timer = .0f;
 
@@ -130,6 +136,7 @@ public class FootStep : MonoBehaviour
         }
 
         sprite.SetActive(false);
+        bottonActive = true;
     }
 
     IEnumerator LoadNextScene()

@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Scene3\ButtonFadeIn.cs" />
     <Compile Include="Assets\Scripts\Scene1\FootstepSoundManager.cs" />
     <Compile Include="Assets\Scripts\Scene2\Scene2Sound.cs" />
+    <Compile Include="Assets\Scripts\Scene5\Scene5Manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -5,12 +5,14 @@ using UnityEngine;
 public class Scene2Sound : MonoBehaviour
 {
     public AudioClip classroomAmbiant;
-    public AudioClip draw;
+    public AudioClip[] drawSounds;
     public AudioClip laugh;
 
     AudioSource audioSource;
     AudioSource backgroundAudio;
     public static Scene2Sound instance;
+
+    int currentIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class Scene2Sound : MonoBehaviour
 
     public void PlayDrawSound()
     {
-        audioSource.PlayOneShot(draw);
+        audioSource.PlayOneShot(drawSounds[currentIndex++ % drawSounds.Length]);
     }
 
     public void PlayLaughSound()
