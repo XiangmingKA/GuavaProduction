@@ -19,4 +19,18 @@ public class changeCursorColor : MonoBehaviour
         transform.position = cursorPos;
         GetComponent<SpriteRenderer>().color = paintColor;
     }
+
+/*    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger");
+        if (other.gameObject.CompareTag("cursor"))
+        {
+            Debug.Log("Trigger stay");
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Pressed primary button.");
+                this.gameObject.GetComponent<Transform>().position = other.gameObject.GetComponent<Transform>().position;
+            }
+        }
+    }*/
 }

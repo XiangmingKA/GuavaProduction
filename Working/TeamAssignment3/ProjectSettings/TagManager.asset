@@ -14,6 +14,7 @@ TagManager:
   - 2_4items
   - 2_5items
   - button
+  - cloth
   layers:
   - Default
   - TransparentFX
