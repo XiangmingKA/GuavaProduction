@@ -6,6 +6,7 @@ public class dirtInteraction : MonoBehaviour
 {
     public GameObject nextDirt;
     public GameObject DirtInMirror;
+    [SerializeField] public int dirtIndex;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class dirtInteraction : MonoBehaviour
         if (collision.gameObject.CompareTag("cloth")){
             this.gameObject.SetActive(false);
             DirtInMirror.SetActive(false);
+            Scene4GameManger.dirtWiped[dirtIndex] = true;
+
             if (nextDirt!=null)
                 nextDirt.SetActive(true);
         }

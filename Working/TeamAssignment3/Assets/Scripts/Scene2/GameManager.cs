@@ -55,6 +55,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(stayTime);
         GroupFlashBack(drawingItems2_4, Items2_4);
         Scene2Sound.instance.PlayLaughSound();
+        yield return new WaitForSeconds(stayTime);
+
+        SceneManager.LoadScene(3);
+        
     }
     public void ButtonClick()
     {

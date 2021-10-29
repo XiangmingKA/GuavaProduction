@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene4GameManger : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Scene4GameManger : MonoBehaviour
     public GameObject scene4_3;
     public GameObject scene4_4;
     public GameObject scene4_6;
+
+    public static bool[] dirtWiped;
 
     public static bool NextButtonStatus;
 
@@ -19,12 +22,16 @@ public class Scene4GameManger : MonoBehaviour
 
     void Start()
     {
+        dirtWiped = new bool[3] {false,false,false };
         NextButtonStatus = false;
         StartCoroutine("ChangeScene");
     }
     void Update()
     {
-
+        if (dirtWiped[0] && dirtWiped[1] && dirtWiped[2])
+        {
+            StartCoroutine(loadScene5());
+        }
     }
 
     IEnumerator ChangeScene()
@@ -67,5 +74,12 @@ public class Scene4GameManger : MonoBehaviour
         }
 
         sprite.SetActive(false);
+    }
+
+    IEnumerator loadScene5()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(5);
+
     }
 }
