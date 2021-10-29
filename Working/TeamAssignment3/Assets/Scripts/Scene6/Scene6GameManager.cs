@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene6GameManager : MonoBehaviour
 {
@@ -60,5 +61,14 @@ public class Scene6GameManager : MonoBehaviour
         }
 
         sprite.SetActive(false);
+
+        if (sprite == scene6_2)
+            LoadNextScene();
+    }
+
+    void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }

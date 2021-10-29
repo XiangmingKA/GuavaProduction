@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Sandwich : MonoBehaviour
 {
+    public AudioClip[] sounds;
     public GameObject[] objs;
     int currentIndex = 0;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         objs = new GameObject[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -59,6 +63,7 @@ public class Sandwich : MonoBehaviour
         if(currentIndex < objs.Length - 1)
         {
             objs[++currentIndex].SetActive(true);
+            audioSource.PlayOneShot(sounds[currentIndex % sounds.Length]);
         }
         else
         {
